@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    font-family: 'Open Sans', sans-serif;   
+}
+.carousel-item>img{
+    height: 90vh;
+    object-fit: cover;
+}
+
+.text-carousel{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    
+}
+
+.text-carousel>div{
+    width: 35vw;
+    bottom: 8rem;
+    right: 6rem;
+    
+}
+
+.card-text{
+    font-size: small;
+}
+
+.banner{
+    height: 60vh;
+}
+
+.banner-img{
+    background-image: url('../img/honolulu.jpg');
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+.formulario{
+    height: 60vh;
+}
+
+.footer{
+    background-color: #1d3947;
+    height: 15vh;
+}
+
+.footer>ul>li{
+    list-style: none;
+    color: white;
+    padding-left: 3rem;
+    
+}
+
+#oradores{
+    height: 100vh;
+    background-color: #efeeee;
+}
+
+.nav-item :hover{
+    color: white !important;
+}
+
+.card:hover{
+    bottom: 20px;
+}
