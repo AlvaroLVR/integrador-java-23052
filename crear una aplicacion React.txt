@@ -1,0 +1,5 @@
+1 abrir la carpeta donde se va a crear la app
+2 correr npm i -g create-react-app 
+3 correr create-react-app nombre-proyecto
+4 correr cd nombre-proyecto (entrar al proyecto)
+5 dentro del proyecto correr npm start
