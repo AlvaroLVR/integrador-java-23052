@@ -16,9 +16,13 @@
     
 }
 
+.text-carousel-descripcion{
+    font-size: larger;
+}
+
 .text-carousel>div{
-    width: 35vw;
-    bottom: 8rem;
+    width: 43vw;
+    bottom: 10rem;
     right: 6rem;
     
 }
