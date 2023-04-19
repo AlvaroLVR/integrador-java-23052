@@ -73,3 +73,64 @@
 .card:hover{
     bottom: 20px;
 }
+
+
+@media (max-width: 400px) {
+    
+    .text-carousel>div{
+        width: 80vw;
+        bottom: 10rem;
+        right: 6rem;
+        left: 0;
+        right: 0;
+        margin: auto;
+        font-size: smaller;
+        
+    }
+
+    #oradores{
+        height: auto;
+    }
+    .card{
+        margin-bottom: 2rem;
+    }
+
+    #lugaryfecha{
+        flex-direction: column !important;
+        height: auto;
+    }
+
+    #lugaryfecha>div{
+        width: 100vw !important;
+        text-align: center;
+    }
+    .banner-img{
+        height: 40vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: revert;
+    }
+    #formulario{
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    #formulario-form{
+        width: 90vw !important;
+    }
+
+    .footer{
+        height: auto;
+    }
+    .footer>ul{
+        display: flex;
+        flex-flow: column wrap !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        text-align: center;
+    }
+    .footer>ul>li{
+        padding: 1rem  0;
+    }
+}
