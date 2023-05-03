@@ -31,18 +31,12 @@
     font-size: small;
 }
 
-.banner{
-    height: 60vh;
-}
 
 .banner-img{
     background-image: url('../img/honolulu.jpg');
-    background-size: contain;
+    background-size: cover;
     background-attachment: fixed;
-}
-
-.formulario{
-    height: 60vh;
+    background-repeat: no-repeat;
 }
 
 .footer{
@@ -62,7 +56,6 @@
 }
 
 #oradores{
-    height: 100vh;
     background-color: #efeeee;
 }
 
@@ -73,7 +66,6 @@
 .card:hover{
     bottom: 20px;
 }
-
 
 @media (max-width: 450px) {
     
