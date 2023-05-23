@@ -61,31 +61,31 @@
             <div class="d-flex flex-wrap justify-content-around mt-5 " id="ticket-card-container">
 
             </div>
-            <form action="post" class="m-4">
+            <form action="" class="m-4">
                 <div class="text-center">
                     venta
                     <h2>VALOR DE TICKET 200$</h2>
                 </div>
                 <div class="row g-4">
                     <div class="col-6">
-                        <input type="text" class="form-control" placeholder="Nombre" aria-label="First name" required>
+                        <input id="name" type="text" class="form-control" placeholder="Nombre" aria-label="First name" required>
                     </div>
                     <div class="col-6">
-                        <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name" required>
+                        <input id="lastName" type="text" class="form-control" placeholder="Apellido" aria-label="Last name" required>
                     </div>
                     <div class="col-12">
-                        <input type="email" class="form-control" placeholder="correo" required>
+                        <input id="email" type="email" class="form-control" placeholder="correo" required>
                     </div>
 
                     <div class="col-md-6">
                         <label class="form-label">cantidad</label>
-                        <input type="number" class="form-control" placeholder="ingrese cantidad" required>
+                        <input id="cant" type="number" class="form-control" placeholder="ingrese cantidad" required>
                     </div>
 
                     <div class="col-md-6">
                         <label class="form-label">Categoria</label>
-                        <select class="form-select">
-                            <option selected>Estudiante</option>
+                        <select id="category" class="form-select">
+                            <option>Estudiante</option>
                             <option>Trainee</option>
                             <option>Junior</option>
                         </select>
@@ -96,8 +96,8 @@
                             aria-label="Disabled input example" disabled readonly>
                     </div>
 
-                    <div class="col-6 d-grid"><button type="button" class="btn text-white" style="background-color: #96c93e;"> Borrar</button></div>
-                    <div class="col-6 d-grid"><button type="button" class="btn text-white" style="background-color: #96c93e;"> Resumen</button></div>
+                    <div class="col-6 d-grid"><button id="delete" type="button" class="btn text-white" style="background-color: #96c93e;"> Borrar</button></div>
+                    <div class="col-6 d-grid"><button id="submit" type="submit" class="btn text-white" style="background-color: #96c93e;"> Resumen</button></div>
                 </div>
 
 

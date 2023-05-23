@@ -1,7 +1,19 @@
 var title = document.getElementById('title-ticket');
 var discount = document.getElementById('dis-ticket');
 var containerTicket = document.getElementById('ticket-card-container');
-var div = document.createElement('div')
+var div = document.createElement('div');
+var submit = document.getElementById('submit');
+var delet = document.getElementById('delete');
+var ticket = 200;
+var totalTicket = document.getElementById('totalTicket')
+
+var inputs = document.querySelectorAll("input");
+
+var name = document.getElementById('name');
+var lastName = document.getElementById('lastName');
+var email = document.getElementById('email');
+var cant = document.getElementById('cant');
+var category = document.getElementById('category');
 
 var arrayTicket = [{
     title: 'Estudiante',
@@ -41,3 +53,28 @@ arrayTicket.forEach(elem => {
     containerTicket.appendChild(cardTicket);
 });
 
+submit.addEventListener('click', ()=>{
+    //console.log('hacer un resumen');
+    let total = 0;
+    
+    if (category.value == 'Estudiante') {      
+        total = cant.value*200;
+        total -= ( (cant.value * 200 ) *80 )/ 100;
+    }
+    if (category.value == 'Trainee') {
+        total = cant.value*200;
+        total -= ((cant.value * 200 ) *50 )/ 100;
+    }
+    if (category.value == 'Junior') {
+        total = cant.value*200;
+        total -= ((cant.value * 200 ) *15 )/ 100;
+    }
+    
+    totalTicket.value = `Total a pagar: $ ${total}`
+    
+});
+
+delet.addEventListener('click',()=>{
+    console.log('se borra todo');
+    
+});
