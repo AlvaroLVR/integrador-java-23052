@@ -3,17 +3,21 @@ var discount = document.getElementById('dis-ticket');
 var containerTicket = document.getElementById('ticket-card-container');
 var div = document.createElement('div');
 var submit = document.getElementById('submit');
-//var delet = document.getElementById('delete');
+var total = 0;
 var ticket = 200;
-var totalTicket = document.getElementById('totalTicket')
-
+var totalTicket = document.getElementById('totalTicket');
+var ticketValue = document.getElementById('ticket-value');
 var inputs = document.querySelectorAll("input");
-
+// inputs values
 var user = document.getElementById('name');
 var lastName = document.getElementById('lastName');
 var email = document.getElementById('email');
 var cant = document.getElementById('cant');
 var category = document.getElementById('category');
+
+/////////////////////////////////////////////////////////
+
+ticketValue.innerText = `VALOR DE TICKET $${ticket}`;
 
 var arrayTicket = [{
     title: 'Estudiante',
@@ -39,9 +43,9 @@ arrayTicket.forEach(elem => {
     cardTicket.className = `card-ticket border-${elem.color}`
     cardTicket.innerHTML = `
     <b id="title-ticket">${elem.title}</b>    
-    tiene un descuento <br>
-    <b id="dis-ticket">${elem.discount}%</b>
-    <p class="text-muted">*presentar documentación</p>`;
+    Tienen un descuento <br>
+    <b >${elem.discount}%</b>
+    <p class="text-muted">* presentar documentación</p>`;
 
     cardTicket.addEventListener('mouseover', () => {
         cardTicket.style.backgroundColor = elem.shadow;
@@ -54,23 +58,25 @@ arrayTicket.forEach(elem => {
 });
 
 submit.addEventListener('click', ()=>{
-    //console.log('hacer un resumen');
-    let total = 0;
+    if (user.value == "" || lastName.value == "" || email.value == "" || cant.value == "" ) {
+        totalTicket.value = `Total a pagar: $ `
+    }else{
+        if (category.value == 'Estudiante') {      
+            total = cant.value*200;
+            total -= ( (cant.value * 200 ) *80 )/ 100;
+        }
+        if (category.value == 'Trainee') {
+            total = cant.value*200;
+            total -= ((cant.value * 200 ) *50 )/ 100;
+        }
+        if (category.value == 'Junior') {
+            total = cant.value*200;
+            total -= ((cant.value * 200 ) *15 )/ 100;
+        }
+
+        totalTicket.value = `Total a pagar: $ ${total}`    
+    }
     
-    if (category.value == 'Estudiante') {      
-        total = cant.value*200;
-        total -= ( (cant.value * 200 ) *80 )/ 100;
-    }
-    if (category.value == 'Trainee') {
-        total = cant.value*200;
-        total -= ((cant.value * 200 ) *50 )/ 100;
-    }
-    if (category.value == 'Junior') {
-        total = cant.value*200;
-        total -= ((cant.value * 200 ) *15 )/ 100;
-    }
-    
-    totalTicket.value = `Total a pagar: $ ${total}`
     
 });
 
@@ -78,9 +84,10 @@ const delet = () =>{
     user.value = '';
     lastName.value = '';
     email.value = '';
-    cant.value = 0;
+    cant.value = '';
+    totalTicket.value = `Total a pagar: $ `
 }
 
-function prevent(e){
-    e.preventDefault();
+function stop(){
+    event.preventDefault();
 }

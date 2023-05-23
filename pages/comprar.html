@@ -64,7 +64,7 @@
             <form action="" class="m-4">
                 <div class="text-center">
                     venta
-                    <h2>VALOR DE TICKET 200$</h2>
+                    <h2 id="ticket-value"></h2>
                 </div>
                 <div class="row g-4">
                     <div class="col-6">
@@ -76,12 +76,10 @@
                     <div class="col-12">
                         <input id="email" type="email" class="form-control" placeholder="correo" required>
                     </div>
-
                     <div class="col-md-6">
                         <label class="form-label">cantidad</label>
                         <input id="cant" type="number" class="form-control" placeholder="ingrese cantidad" required>
                     </div>
-
                     <div class="col-md-6">
                         <label class="form-label">Categoria</label>
                         <select id="category" class="form-select">
@@ -90,14 +88,12 @@
                             <option>Junior</option>
                         </select>
                     </div>
-
                     <div class="col-12">
                         <input class="form-control bg-primary bg-opacity-25 text-primary p-3" type="text" id="totalTicket" value="Total a pagar: $"
                             aria-label="Disabled input example" disabled readonly>
                     </div>
-
-                    <div class="col-6 d-grid"><button onclick="delet()" type="button" class="btn text-white" style="background-color: #96c93e;"> Borrar</button></div>
-                    <div class="col-6 d-grid"><button onclick="prevent(e)" id="submit" type="submit" class="btn text-white" style="background-color: #96c93e;"> Resumen</button></div>
+                    <div class="col-6 d-grid"> <button onclick="delet()" type="button" class=" btn text-white" style="background-color: #96c93e;"> Borrar</button></div>
+                    <div class="col-6 d-grid"><button onclick="stop()" id="submit" type="submit" class=" btn text-white" style="background-color: #96c93e;"> Resumen</button></div>
                 </div>
 
 
