@@ -76,8 +76,9 @@ submit.addEventListener('click', ()=>{
 
         totalTicket.value = `Total a pagar: $ ${total}`    
     }
-    
-    
+    if (cant.value == 0) {
+        alert('ingrese una cantidad de tickets.')
+    }
 });
 
 const delet = () =>{
