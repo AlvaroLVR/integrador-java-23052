@@ -3,13 +3,13 @@ var discount = document.getElementById('dis-ticket');
 var containerTicket = document.getElementById('ticket-card-container');
 var div = document.createElement('div');
 var submit = document.getElementById('submit');
-var delet = document.getElementById('delete');
+//var delet = document.getElementById('delete');
 var ticket = 200;
 var totalTicket = document.getElementById('totalTicket')
 
 var inputs = document.querySelectorAll("input");
 
-var name = document.getElementById('name');
+var user = document.getElementById('name');
 var lastName = document.getElementById('lastName');
 var email = document.getElementById('email');
 var cant = document.getElementById('cant');
@@ -74,7 +74,13 @@ submit.addEventListener('click', ()=>{
     
 });
 
-delet.addEventListener('click',()=>{
-    console.log('se borra todo');
-    
-});
+const delet = () =>{
+    user.value = '';
+    lastName.value = '';
+    email.value = '';
+    cant.value = 0;
+}
+
+function prevent(e){
+    e.preventDefault();
+}
