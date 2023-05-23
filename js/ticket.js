@@ -60,6 +60,9 @@ arrayTicket.forEach(elem => {
 submit.addEventListener('click', ()=>{
     if (user.value == "" || lastName.value == "" || email.value == "" || cant.value == "" ) {
         totalTicket.value = `Total a pagar: $ `
+        if (cant.value > 0) {
+            user.focus();
+        }
     }else{
         if (category.value == 'Estudiante') {      
             total = cant.value*200;
