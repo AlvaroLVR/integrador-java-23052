@@ -55,7 +55,7 @@ arrayTicket.forEach(elem => {
     })
 
     containerTicket.appendChild(cardTicket);
-});
+})
 
 submit.addEventListener('click', ()=>{
     if (user.value == "" || lastName.value == "" || email.value == "" || cant.value == "" ) {
@@ -80,9 +80,10 @@ submit.addEventListener('click', ()=>{
         totalTicket.value = `Total a pagar: $ ${total}`    
     }
     if (cant.value == 0) {
-        alert('ingrese una cantidad de tickets.')
+        alert('INGRESE UNA CANTIDAD DE TICKETS.');
+        cant.focus();
     }
-});
+})
 
 const delet = () =>{
     user.value = '';
