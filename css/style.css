@@ -67,6 +67,19 @@
     bottom: 20px;
 }
 
+
+
+.card-ticket{
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    width: 30%;
+    border: 2px solid ;
+    cursor: pointer;
+    text-align: center;
+    justify-content: space-evenly;
+}   
+
 @media (max-width: 450px) {
     
     .text-carousel>div{
