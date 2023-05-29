@@ -40,7 +40,7 @@ var arrayTicket = [{
 
 arrayTicket.forEach(elem => {
     let cardTicket = document.createElement('div')
-    cardTicket.className = `card-ticket border-${elem.color}`
+    cardTicket.className = `card-ticket border-${elem.color} flex-wrap`
     cardTicket.innerHTML = `
     <b id="title-ticket">${elem.title}</b>    
     Tienen un descuento <br>
@@ -60,6 +60,7 @@ arrayTicket.forEach(elem => {
 submit.addEventListener('click', ()=>{
     if (user.value == "" || lastName.value == "" || email.value == "" || cant.value == "" ) {
         totalTicket.value = `Total a pagar: $ `
+        alert('COMPLETE TODOS LOS CAMPOS POR FAVOR');
         if (cant.value > 0) {
             user.focus();
         }
