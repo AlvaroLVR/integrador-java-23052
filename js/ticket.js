@@ -80,8 +80,8 @@ submit.addEventListener('click', ()=>{
 
         totalTicket.value = `Total a pagar: $ ${total}`    
     }
-    if (cant.value == 0) {
-        alert('INGRESE UNA CANTIDAD DE TICKETS.');
+    if (cant.value < 0) {
+        alert('INGRESE UNA CANTIDAD VALIDA DE TICKETS.');
         cant.focus();
     }
 })
